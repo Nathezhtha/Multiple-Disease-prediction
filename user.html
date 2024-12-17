@@ -1,0 +1,221 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+<html lang="zxx">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="keywords"
+    content="Medick Responsive web template, Bootstrap Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+  <title> </title>
+  <style>
+	 {% include 'css/style.css' %}
+	</style>
+  <link href="//fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+	
+	<style type="text/css">
+<!--
+.style1 {color: #FF0000}
+-->
+    </style>
+</head>
+<body onLoad="flashMessage()">
+	<!-- header --> <script>
+    function flashMessage() {
+      if ("{{ flash_message }}" == "True") {
+        alert("{{ data }}");
+      }
+    }
+  </script>
+  <!--header-->
+  <div class="header-w3l">
+    <!-- header -->
+    <header id="site-header" class="fixed-top">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg stroke"> <a class="navbar-brand" href="#">
+           Multi Disease<span class="sub-logo"> Prediction</span></span>
+          </a>
+          <!-- if logo is image enable this   
+            <a class="navbar-brand" href="#index.html">
+                <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+            </a> -->
+          <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+            data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+            <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+            </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mx-lg-auto">
+      {% include 'menu/indexmenu.html' %}
+              
+
+            </ul>
+
+          </div>
+          <!-- toggle switch for light and dark theme -->
+         
+          <!-- //toggle switch for light and dark theme -->
+        </nav>
+      </div>
+    </header>
+</div>
+    <!-- //header -->
+    <!--/breadcrumb-bg-->
+    <div class="breadcrumb-bg w3l-inner-page-breadcrumb py-5">
+      <div class="container pt-lg-5 pt-md-3 p-lg-4 pb-md-3 my-lg-3">
+       
+       
+      </div>
+    </div>
+  <!--//breadcrumb-bg-->
+  <!-- banner bottom shape -->
+  <div class="position-relative">
+    <div class="shape overflow-hidden">
+      <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+      </svg>
+    </div>
+  </div>
+  <!-- banner bottom shape -->
+  <!-- //w3l-inner-page-breadcrumb-->
+ 
+  <!-- /w3l-content-2-->
+  <!-- /bottom-grids--><!-- //bottom-grids-->
+  <!-- home page block grids --><!-- //home page block grids -->
+  <!-- /w3l-content-5--><!-- /w3l-content-5-->
+  <!--/team-sec-->
+  <section class="w3l-team">
+    <div class="team py-5">
+      <div class="container py-lg-5 py-md-4">
+        <div class="title-content text-center">
+          
+          <h3 align="center" class="title-w3l mb-sm-3 text-center">User Login</h3>
+        </div>
+      
+      <form name="form1" method="post"  action="/user_login">
+        <table height="127" align="center">
+          <tr>
+            <td>Name</td>
+            <td><input type="text" name="username" placeholder="Username" required=""></td>
+          </tr>
+          <tr>
+            <td>Password</td>
+            <td><input type="password" name="password" placeholder="Password" required=""></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td><span class="tp">
+              <input type="submit" name="btn" value="Login">
+            </span><span class="style1">{{ error }}</span></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td><a href="/user_register">New User register Here.. </a></td>
+          </tr>
+        </table>
+      </form>
+      </div>
+    </div>
+  </section>
+  <!--//team-sec-->
+  
+  <!-- footer --><!-- //footer -->
+
+  <!-- copyright -->
+  <section class="w3l-copyright">
+    <div class="container">
+      <div class="row bottom-copies">
+        <p class="col-lg-8 copy-footer-29">All rights reserved. Design by <a
+            href="#">
+            Admin</a></p>
+
+      
+
+      </div>
+    </div>
+
+    <!-- move top -->
+    <button onClick="topFunction()" id="movetop" title="Go to top">
+      &#10548;
+    </button>
+    <script>
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction()
+      };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("movetop").style.display = "block";
+        } else {
+          document.getElementById("movetop").style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+    <!-- /move top -->
+  </section>
+  <!-- //copyright -->
+  <!--//footer-->
+  <!-- Template JavaScript -->
+  <script src="assets/js/jquery-3.3.1.min.js"></script>
+  <script src="assets/js/theme-change.js"></script>
+
+  <!-- disable body scroll which navbar is in active -->
+  <script>
+    $(function () {
+      $('.navbar-toggler').click(function () {
+        $('body').toggleClass('noscroll');
+      })
+    });
+  </script>
+  <!-- disable body scroll which navbar is in active -->
+
+  <!--/MENU-JS-->
+  <script>
+    $(window).on("scroll", function () {
+      var scroll = $(window).scrollTop();
+
+      if (scroll >= 80) {
+        $("#site-header").addClass("nav-fixed");
+      } else {
+        $("#site-header").removeClass("nav-fixed");
+      }
+    });
+
+    //Main navigation Active Class Add Remove
+    $(".navbar-toggler").on("click", function () {
+      $("header").toggleClass("active");
+    });
+    $(document).on("ready", function () {
+      if ($(window).width() > 991) {
+        $("header").removeClass("active");
+      }
+      $(window).on("resize", function () {
+        if ($(window).width() > 991) {
+          $("header").removeClass("active");
+        }
+      });
+    });
+  </script>
+  <!--//MENU-JS-->
+
+
+  <script src="assets/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

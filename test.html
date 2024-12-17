@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Click Voice to Text</title>
+</head>
+<body>
+    <h1>Click on the microphone to start speaking</h1>
+    <img id="micImage" src="mic-icon.png" alt="Mic" style="cursor:pointer; width:50px;" />
+    <p>Detected Text: <span id="outputText"></span></p>
+
+    <script>
+        // Check if browser supports SpeechRecognition
+        window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+        if (!window.SpeechRecognition) {
+            alert("Your browser does not support Speech Recognition.");
+        } else {
+            const recognition = new SpeechRecognition();
+            recognition.lang = 'en-US'; // Set language as per requirement
+            recognition.interimResults = false; // Only final result
+            recognition.maxAlternatives = 1; // Get the best result only
+            let isRecognizing = false; // Track recognition status
+
+            // Get image and text output elements
+            const micImage = document.getElementById("micImage");
+            const outputText = document.getElementById("outputText");
+
+            // Set click event on image to toggle recognition
+            micImage.addEventListener("click", function() {
+                if (!isRecognizing) { // Start recognition if it's not already active
+                    recognition.start();
+                    isRecognizing = true;
+                }
+            });
+
+            // When recognition receives the first result, display it and stop recognition
+            recognition.onresult = (event) => {
+                const transcript = event.results[0][0].transcript;
+                outputText.textContent = transcript;
+                recognition.stop(); // Stop listening after one result
+            };
+
+            // Reset recognition status after stopping
+            recognition.onend = () => {
+                isRecognizing = false;
+            };
+
+            // Stop recognition if there’s an error
+            recognition.onerror = (event) => {
+                console.error("Speech recognition error:", event.error);
+                recognition.stop();
+                isRecognizing = false;
+            };
+        }
+    </script>
+</body>
+</html>

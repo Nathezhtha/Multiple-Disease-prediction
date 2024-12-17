@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="keywords"
+    content="Medick Responsive web template, Bootstrap Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+  <title>Doctor Details</title>
+  <style>
+    {% include 'css/style.css' %}
+  </style>
+  <link href="//fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style type="text/css">
+    .style1 {color: #FF0000}
+  </style>
+</head>
+
+<body onLoad="showPosition()">
+  <!-- header -->
+  <script>
+    function flashMessage() {
+      if ("{{ flash_message }}" == "True") {
+        alert("{{ data }}");
+      }
+    }
+  </script>
+
+  <script type="text/javascript">
+    function showPosition() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+          var Latitude = position.coords.latitude;
+          var Longitude = position.coords.longitude;
+          document.getElementById("latitude").value = Latitude;
+          document.getElementById("longitude").value = Longitude;
+        });
+      } else {
+        alert("Sorry, your browser does not support HTML5 geolocation.");
+      }
+    }
+  </script>
+
+  <div class="header-w3l">
+    <header id="site-header" class="fixed-top">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg stroke">
+          <a class="navbar-brand" href="#">Multi Disease <span class="sub-logo">Prediction</span></a>
+          <button class="navbar-toggler collapsed bg-gradient" type="button" data-toggle="collapse"
+            data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+            <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mx-lg-auto">
+              {% include 'menu/doctormenu.html' %}
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+  </div>
+
+  <div class="breadcrumb-bg w3l-inner-page-breadcrumb py-5">
+    <div class="container pt-lg-5 pt-md-3 p-lg-4 pb-md-3 my-lg-3">
+    </div>
+  </div>
+
+  <div class="position-relative">
+    <div class="shape overflow-hidden">
+      <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Train Data Section -->
+  <section class="w3l-team">
+    <div class="team py-5">
+      <div class="container py-lg-5 py-md-4">
+        <div class="title-content text-center">
+          <h3 align="center" class="title-w3l mb-sm-3 text-center">Doctor Details</h3>
+        </div>
+
+        <!-- Form with Sample Data -->
+        <form name="form1" method="post" action="/doctor_train_data">
+          <table height="127" align="center">
+            <!-- Doctor ID -->
+            <tr>
+              <td>Doctor ID</td>
+              <td><input name="doctor_id" type="text" id="doctor_id" value="D1001" required=""></td>
+            </tr>
+            <!-- Name -->
+            <tr>
+              <td>Doctor Name</td>
+              <td><input name="doctor_name" type="text" id="doctor_name" value="Dr. John Doe" required=""></td>
+            </tr>
+            <!-- Disease -->
+            <tr>
+              <td>Disease</td>
+              <td><input name="disease" type="text" id="disease" value="Hypertension" required=""></td>
+            </tr>
+            <!-- Specialist -->
+            <tr>
+              <td>Specialist</td>
+              <td><input name="specialist" type="text" id="specialist" value="Cardiologist" required=""></td>
+            </tr>
+            <!-- Fees -->
+            <tr>
+              <td>Fees</td>
+              <td><input name="fees" type="text" id="fees" value="1000" required=""></td>
+            </tr>
+            <!-- Duration -->
+            <tr>
+              <td>Duration (Minutes)</td>
+              <td><input name="duration" type="text" id="duration" value="45" required=""></td>
+            </tr>
+            <!-- Location -->
+            <tr>
+              <td>Location</td>
+              <td><input name="location" type="text" id="location" value="City Medical Center, NY" required=""></td>
+            </tr>
+            <!-- Latitude -->
+            <tr>
+              <td>Latitude</td>
+              <td><input name="latitude" type="text" id="latitude" value="40.7128" required=""></td>
+            </tr>
+            <!-- Longitude -->
+            <tr>
+              <td>Longitude</td>
+              <td><input name="longitude" type="text" id="longitude" value="-74.0060" required=""></td>
+            </tr>
+            <!-- Distance -->
+            <tr>
+              <td>Distance (km)</td>
+              <td><input name="distance" type="text" id="distance" value="3" required=""></td>
+            </tr>
+            <!-- Chat Link -->
+            <tr>
+              <td>Chat Link</td>
+              <td><input name="chat_link" type="text" id="chat_link" value="https://chat.example.com" required=""></td>
+            </tr>
+            <!-- Submit -->
+            <tr>
+              <td>&nbsp;</td>
+              <td><input type="submit" name="Submit" value="Submit"></td>
+            </tr>
+          </table>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <section class="w3l-copyright">
+    <div class="container">
+      <div class="row bottom-copies">
+        <p class="col-lg-8 copy-footer-29">All rights reserved. Design by <a href="#">Admin</a></p>
+      </div>
+    </div>
+
+    <!-- move top -->
+    <button onClick="topFunction()" id="movetop" title="Go to top">&#10548;</button>
+    <script>
+      window.onscroll = function () { scrollFunction() };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("movetop").style.display = "block";
+        } else {
+          document.getElementById("movetop").style.display = "none";
+        }
+      }
+
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+  </section>
+
+  <script src="assets/js/jquery-3.3.1.min.js"></script>
+  <script src="assets/js/theme-change.js"></script>
+  <script>
+    $(function () {
+      $('.navbar-toggler').click(function () {
+        $('body').toggleClass('noscroll');
+      })
+    });
+  </script>
+  <script src="assets/js/bootstrap.min.js"></script>
+</body>
+
+</html>

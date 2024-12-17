@@ -1,0 +1,10 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html;charset=utf-8" />
+</head>
+<body><h1>Database python_multi_disease_prediction</h1><h2>Table structure for table user_details</h2><table class="width100" cellspacing="1"><tr class="print-category"><th class="print">Field</th><td class="print"><b>Type</b></td><td class="print"><b>Null</b></td><td class="print"><b>Default</b></td></tr><tr class="print-category"><td class="print">id</td><td class="print">int(100)</td><td class="print">Yes</td><td class="print">NULL</td></tr><tr class="print-category"><td class="print">name</td><td class="print">varchar(100)</td><td class="print">Yes</td><td class="print">NULL</td></tr><tr class="print-category"><td class="print">contact</td><td class="print">varchar(100)</td><td class="print">Yes</td><td class="print">NULL</td></tr><tr class="print-category"><td class="print">email</td><td class="print">varchar(100)</td><td class="print">Yes</td><td class="print">NULL</td></tr><tr class="print-category"><td class="print">address</td><td class="print">varchar(100)</td><td class="print">Yes</td><td class="print">NULL</td></tr><tr class="print-category"><td class="print">dob</td><td class="print">varchar(100)</td><td class="print">Yes</td><td class="print">NULL</td></tr><tr class="print-category"><td class="print">password</td><td class="print">varchar(100)</td><td class="print">Yes</td><td class="print">NULL</td></tr><tr class="print-category"><td class="print">status</td><td class="print">varchar(100)</td><td class="print">Yes</td><td class="print">NULL</td></tr><tr class="print-category"><td class="print">report</td><td class="print">varchar(100)</td><td class="print">Yes</td><td class="print">NULL</td></tr></table><h2>Dumping data for table user_details</h2><table class="width100" cellspacing="1"></table></body></html>
